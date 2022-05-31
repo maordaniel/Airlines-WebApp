@@ -6,6 +6,7 @@ import '../styles/AirlinePageStyle.css';
 import AirlineReviewsCard from "../components/AirlineReviewsCard";
 import AirlineReviewsContactDetails from "../components/AirlineReviewsContactDetails";
 
+
 function AirlinePage(){
   const {airlineCode} = useParams();
   const [companyData, setCompanyData] = useState<AirlineDataType>()
@@ -15,9 +16,9 @@ function AirlinePage(){
 
   useEffect(() =>{
     axios.get(`https://frontend-assignment-api.azurewebsites.net/api/airline?airline-code=${airlineCode}`)
-      .then(data => {
+      .then(res => {
         setLoadingData(false);
-        setCompanyData(data.data);
+        setCompanyData(res.data);
       })
       .catch(error => setError(true))
 

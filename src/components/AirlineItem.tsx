@@ -1,8 +1,6 @@
 import React from "react";
 import {AirlineItemType} from "../types/globalTypes";
-import {
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function AirlineItem({name, code, logo}: AirlineItemType){
 

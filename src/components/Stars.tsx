@@ -1,10 +1,10 @@
 import React from "react";
 
-interface props{
+interface Props{
   score: number
 }
 
-function Stars({score}: props){
+function Stars({score}: Props){
   return (
       <div>
         {Array(score).fill(0).map((_, index)=>

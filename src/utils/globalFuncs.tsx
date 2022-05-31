@@ -12,3 +12,21 @@ export function getAverage(key: keyof ReviewsType, reviews: ReviewsType[]){
 
   return Math.round(average);
 }
+
+export function isEmpty(str: string){
+  return (
+    (typeof str == 'undefined')
+    ||
+    (str == null)
+    ||
+    (str.length === 0)
+    ||
+    (str === "")
+    ||
+    (str.replace(/\s/g,"") === "")
+    ||
+    (!/[^\s]/.test(str))
+    ||
+    (/^\s*$/.test(str))
+  );
+}
